@@ -1,0 +1,34 @@
+calling External Api in angular :1)Get method
+                                 2)Get method with parameter
+                                 3)post method
+                                 
+                                        1)Get method
+so for making any Http request we have to first import HttpClientModule in app.module.ts 
+After that we will make a service to call an external api for which we will  be create a freeapi.service.ts file
+In freeapi.service.ts file we will import injectable from angular core  after which we will declare a class named as freeApiService of type injectable
+import { Injectable } from '@angular/core';
+@Injectable()
+export class freeApiService/*freeApiService is a service that we are going to inject in other component */
+{
+
+}
+we are going to use an external api 'https://jsonplaceholder.typicode.com/posts/1/comments' which is get Api that returns  json in form of list with fiels like postId,Id,name,email & body
+to do so we will create a folder called class inside which we will create a 'comment.ts' file   which will replicate all fields of Api
+Now lets go to freeApiService and create a method that will able to make get request 
+Now we have to import our service to app.module.ts 
+Now its time to call the service from app.component.ts file
+                                 
+                                        2)Get method with parameter
+we are going to use an external api 'https://jsonplaceholder.typicode.com/posts?userId=value' which is get Api with parameter that returns  json in form of list with fiels like userId,Id,title & body     
+we will be creating a class 'getwithparameter' to replicate this field                    
+Now lets go to freeApiService and create a method that will able to make get request with parameter             
+Now its time to call the service from app.component.ts file
+                                        
+                                        3)post method
+we are going to use an external api 'https://jsonplaceholder.typicode.com/posts' which is post Api that takes jslon list containing value for userId,title & body  and returns  id,userId,title & body as result
+                 
+Now lets go to freeApiService and create a method that will able to make post request with parameter             
+Now its time to call the service from app.component.ts file
+import getwithparameter inside freeApi.service.ts
+
+free api : http://jsonplaceholder.typicode.com/guide/

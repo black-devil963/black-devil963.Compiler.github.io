@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <textarea [(ngModel)]="Inputs"style="padding-top:48px;position:absolute;right:0px;width:10%;top: 6px;border-bottom:20px solid black;" rows="43"></textarea>
+  <div style="background-color: black;color: goldenrod;position:absolute;right:0px;width:10%;top: 6px;text-align: center;padding: 5px;">Inputs</div>
+  <div style="position: relative;">
+  <input type="text" [(ngModel)]="n" style="height: 500px;width: 80%;margin-left: 10%;margin-bottom:29px;border: 2px solid black;;">
+  <button  (click)="run()" style="z-index: 1;;position:absolute;width:60px;height:30px;top:0px;right:9.5%;border:2px solid black;border-right: none;border-top: none;">Run</button><br>
+  <select [(ngModel)]="option" (click)="update()" style="background-color: rgb(241, 240, 240);position: absolute;top:0px;left: 10%;height:30px;border:2px solid black;border-left: none;border-top: none;" >
+    <option value="lua" >Lua</option>
+    <option value="php" >Php</option>
+    <option value="python3" >Python</option>
+    <option value="dart" >Dart</option>
+    <option value="java" >Java</option>
+    
+  </select>
+  <div style="background-color: white;position:relative;padding:5px;border :2px solid black;margin-left: 10%;width:79.75%;height:155px;border-bottom: 20px solid black;border-right: none;">
+    {{objpost?.output}}
+    <div style="color: goldenrod;position: absolute;bottom:-20px;right:10px">Powered By @Zummit-infolab</div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
